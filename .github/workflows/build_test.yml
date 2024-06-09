@@ -26,6 +26,7 @@ jobs:
       run: npm run test-npm-security
   integration-tests:
     runs-on: ubuntu-latest
+    needs: npm_security-tests
     steps:
     - name: CheckOut of the repo
       uses: actions/checkout@v4
